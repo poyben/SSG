@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Responsivo con Bootstrap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .bg-rosa {
+            background-color: pink;
+            display: flex;
+        justify-content: center;
+        }
+        .bg-red {
+            background-color: red;
+        }
+        .bg-lightblue {
+            background-color: lightblue;
+        }
+        .bg-amarillo {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+        }
+        .texto-grande {
+            font-size: large;
+        }
+        @media (max-width: 576px) {
+            /* Estilos para pantallas pequeñas si es necesario */
+        }
+        @media (min-width: 576px) and (max-width: 767px) { /* Solo para sm */
+    .bg-sm-lightblue {
+        background-color: lightblue;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .bg-sm-red{
+        background-color: red;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .bg-sm-green{
+        background-color: green;
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media (min-width: 768px) { /* md y tamaños mayores */
+    .bg-md-green {
+        background-color: green;
+        display: flex;
+        justify-content: flex-start;
+    }
+   
+    .bg-md-red{
+        background-color: red;
+        display: flex;
+        justify-content:center
+    }
+    
+    .bg-md-amarillo1{
+        display: flex;
+        justify-content:flex-end
+    }
+    
+    .bg-md-amarillo2{
+        display: flex;
+        justify-content:flex-start
+    }
+    
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Primera fila -->
+        <div class="row">
+            <div class="col-12 bg-rosa bg-sm-lightblue bg-md-green">
+                <p class="text-left texto-grande" >Header</p>
+            </div>
+        </div>
+
+        <!-- Segunda fila -->
+        <div class="row">
+            <div class="col-12 col-sm-6 bg-red  bg-md-red col-md-4">
+                <p class="text-center texto-grande"style="display: flex; justify-content: flex-start;">1</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 bg-lightblue bg-sm-red bg-md-red">
+                <p class="text-center texto-grande">2</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 bg-red bg-sm-green bg-md-red">
+                <p class="text-center texto-grande"style="display: flex; justify-content: flex-end;">3</p>
+            </div>
+        </div>
+
+        <!-- Tercera fila -->
+        <div class="row">
+            <div class="col-12 col-md-6 bg-amarillo bg-md-amarillo1">
+                <p class="text-right texto-grande">footer 1</p>
+            </div>
+            <div class="col-12 col-md-6 bg-amarillo bg-md-amarillo2">
+                <p class="text-left texto-grande">footer 2</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

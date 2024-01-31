@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <title>Ejercicio Bootstrap</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row" style="background-color: green;">
+      <div class="col">Header</div>
+    </div>
+    <!-- Segunda fila -->
+    <div class="row">
+      <div class="col-6 col-sm-3 offset-md-3 border border-secondary p-5 text-center" style="background-color: violet;">1</div>
+      <div class="col-6 col-sm-3   border border-secondary p-5 text-center"style="background-color: violet;">2</div> <!-- Ajusta el offset según sea necesario -->
+      <div class="w-100 d-none d-md-block"></div>
+      <div class="col-6 col-sm-3   border border-secondary p-5 text-center"style="background-color: violet;">3</div>
+      <div class="col-6 col-sm-3 offset-md-6 border border-secondary p-5 text-center"style="background-color: violet;">4</div>
+    </div>
+
+    <!-- Tercera fila -->
+    <div class="row">
+      <!-- Usa las clases de orden para md y mayores -->
+      <div class="col-6 col-sm-3 order-md-4" style="background-color: lightgray;">a</div>
+      <div class="col-6 col-sm-3 order-md-3" style="background-color: lightgray;">b</div>
+      <div class="col-6 col-sm-3 order-md-2" style="background-color: lightgray;">c</div>
+      <div class="col-6 col-sm-3 order-md-1" style="background-color: lightgray;">d</div>
+    
+    </div>
+
+
+
+    <!-- Fila azul claro -->
+    <div class="row d-none d-md-block" style="background-color:lightblue;">
+      <div class="col-md">Desktop</div>
+    </div>
+    <div class="row d-none d-sm-block d-md-none" style="background-color:lightblue;">
+      <div class="col-sm">Tablet</div>
+    </div>
+    <div class="row d-block d-sm-none" style="background-color:lightblue;">
+      <div class="col-xs">Mobile</div>
+    </div>
+
+        <!-- Quinta fila (Naranja) -->
+        <div class="row" >
+         <!-- Versión para xs y sm: Solo ':c' se muestra en xs. Ambos ':D' y ':c' se muestran en sm, con ':D' primero. -->
+    <div class="col-12 d-block d-sm-none" style="background-color: orange;">:D</div> <!-- Visible en xs y sm -->
+    <div class="col-sm-6 d-none d-sm-block d-md-none order-sm-1" style="background-color: orange;">:D</div> <!-- Visible solo en sm -->
+    <div class="col-sm-6 d-none d-sm-block d-md-none order-sm-2" style="background-color: orange;">:c</div> <!-- Visible solo en sm -->
+
+    <!-- Versión para md y mayores: ':c' primero con offset, luego ':D'. -->
+    <div class="col-xs-6 col-md-3 offset-md-3 d-none d-md-block" style="background-color: orange;">:c</div> <!-- Visible en md y mayores -->
+    <div class="col-md-3 d-none d-md-block" style="background-color: orange;">:D</div> <!-- Visible en md y mayores -->
+        </div>
+        <!-- Última fila -->
+    <div class="row" style="background-color: green;">
+      <div class="col d-none d-sm-block">Footer</div>
+    </div>
+          <!-- Ajusta el orden y el offset para md y mayores, y oculta una columna en xs -->
+        </div>
+        
+    
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
